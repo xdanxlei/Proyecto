@@ -8,6 +8,9 @@ using UnityEngine.SceneManagement;
 
 public class script_menu : MonoBehaviour
 {
+    // Constantes
+    const string PRIMER_MAPA = "Primer mapa";
+
     public GameObject  menu; // Assign in inspector
     public GameObject  menuOpciones; // Assign in inspector
     public GameObject  menuSalir; // Assign in inspector
@@ -29,18 +32,20 @@ public class script_menu : MonoBehaviour
         menuOpciones.gameObject.SetActive(true);
     }
 
-    // Función para abrir el menú de opciones
+    // Función para abrir el menú finalizar juego
     public void salir(){
         menu.gameObject.SetActive(false);
         menuSalir.gameObject.SetActive(true);
     }
 
+    // Función para abrir el menú de opciones y cerrar los demás
     public void volver(){
         menu.gameObject.SetActive(true);
         menuOpciones.gameObject.SetActive(false);
         menuSalir.gameObject.SetActive(false);
     }
 
+    // Función para cerrar el juego
     public void quit(){
         #if UNITY_EDITOR
             EditorApplication.isPlaying = false;
@@ -62,7 +67,7 @@ public class script_menu : MonoBehaviour
     }
 
     public void nuevaPartida(){
-        SceneManager.LoadScene("Primer mapa", LoadSceneMode.Single);
+        SceneManager.LoadScene(PRIMER_MAPA, LoadSceneMode.Single);
     }
 
     public void cargarPartida(){
