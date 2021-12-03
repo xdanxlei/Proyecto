@@ -58,8 +58,10 @@ public class Player : MonoBehaviour
 
     // Mover sprite según input
     private void Mover() {
+        Vector3 offset = boxCollider.offset;
+
         // Detección de colisión en y
-        hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector3(0, moveDelta.y), Mathf.Abs(moveDelta.y * Time.deltaTime), LayerMask.GetMask("Actor", "Blocking"));
+        hit = Physics2D.BoxCast(transform.position + offset, boxCollider.size, 0, new Vector3(0, moveDelta.y), Mathf.Abs(moveDelta.y * Time.deltaTime), LayerMask.GetMask("Actor", "Blocking"));
 
         // Comprobar que no hay colisión en y
         if (hit.collider == null) {
@@ -68,7 +70,7 @@ public class Player : MonoBehaviour
         }
         
         // Detección de colisión en x
-        hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector3(moveDelta.x, 0), Mathf.Abs(moveDelta.x * Time.deltaTime), LayerMask.GetMask("Actor", "Blocking"));
+        hit = Physics2D.BoxCast(transform.position + offset, boxCollider.size, 0, new Vector3(moveDelta.x, 0), Mathf.Abs(moveDelta.x * Time.deltaTime), LayerMask.GetMask("Actor", "Blocking"));
 
         // Comprobar que no hay colisión en x
         if (hit.collider == null) {

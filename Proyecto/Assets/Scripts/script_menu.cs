@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 #if UNITY_EDITOR
     using UnityEditor;
 #endif
@@ -49,7 +50,8 @@ public class script_menu : MonoBehaviour
     }
 
     public void botonEnter(){
-        sonido.PlayOneShot(botonEn);    }
+        sonido.PlayOneShot(botonEn);
+    }
 
     public void botonPositive(){
         sonido.PlayOneShot(botonPos);
@@ -57,5 +59,13 @@ public class script_menu : MonoBehaviour
 
     public void botonNegative(){
         sonido.PlayOneShot(botonNeg);        
+    }
+
+    public void nuevaPartida(){
+        SceneManager.LoadScene("Primer mapa", LoadSceneMode.Single);
+    }
+
+    public void cargarPartida(){
+
     }
 }
