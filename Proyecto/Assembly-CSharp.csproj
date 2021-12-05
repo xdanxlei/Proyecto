@@ -37,25 +37,28 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Cainos\Pixel Art Top Down - Basic\Script\TopDownCharacterController.cs" />
-     <Compile Include="Assets\Scripts\script_menu.cs" />
+     <Compile Include="Assets\Scripts\MenuPrincipal.cs" />
+     <Compile Include="Assets\Scripts\Battler.cs" />
      <Compile Include="Assets\Scripts\SetSoundVolume.cs" />
-     <Compile Include="Assets\Free Pixel Art Forest\Demo\MoveBackground.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\SetVolume.cs" />
+     <Compile Include="Assets\Scripts\BattleManager.cs" />
      <Compile Include="Assets\Cainos\Pixel Art Top Down - Basic\Script\PropsAltar.cs" />
      <Compile Include="Assets\Scripts\CameraMotor.cs" />
      <Compile Include="Assets\Cainos\Pixel Art Top Down - Basic\Script\SpriteColorAnimation.cs" />
+     <Compile Include="Assets\Scripts\Gear.cs" />
+     <Compile Include="Assets\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Scripts\ReproduceMusica.cs" />
      <Compile Include="Assets\Scripts\Battle.cs" />
      <Compile Include="Assets\Scripts\Collidable.cs" />
+     <Compile Include="Assets\Scripts\MenuPausa.cs" />
      <Compile Include="Assets\Cainos\Pixel Art Top Down - Basic\Script\LayerTrigger.cs" />
+     <Compile Include="Assets\Scripts\Escena_1.cs" />
      <Compile Include="Assets\Cainos\Pixel Art Top Down - Basic\Script\CameraFollow.cs" />
-     <Compile Include="Assets\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Enemy.cs" />
      <None Include="Assets\Cainos\Pixel Art Top Down - Basic\Changelog.txt" />
-     <None Include="Assets\Free Pixel Art Forest\Contact.txt" />
      <None Include="Assets\Cainos\Pixel Art Top Down - Basic\Shader\SH Sprite Shadow.shader" />
-     <None Include="Assets\Free Pixel Art Forest\Lisense.txt" />
      <None Include="Assets\Cainos\Pixel Art Top Down - Basic\Shader\SH Sprite Shadow Mask.shader" />
-     <None Include="Assets\Free Pixel Art Forest\readme.txt" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\2020.3.20f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

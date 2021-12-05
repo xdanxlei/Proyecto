@@ -53,3 +53,9 @@ TagManager:
   - name: Flotante
     uniqueID: 1928673395
     locked: 0
+  - name: Combat_bg
+    uniqueID: 1627033923
+    locked: 0
+  - name: Combat _actor
+    uniqueID: 1704459491
+    locked: 0

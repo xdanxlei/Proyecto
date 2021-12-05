@@ -8,12 +8,19 @@ public class Battle : Collidable
     // Escena del combate
     public string escenaCombate;
 
+    // Objetos a parar
+    public GameObject escena;
+
     // Al colisionar con algo
     protected override void OnCollide(Collider2D colision) {
         // Comprobar si es el jugador
         if (colision.name == "Player") {
-            SceneManager.LoadScene(escenaCombate, LoadSceneMode.Single);
+            // Pausar escena
             gameObject.SetActive(false);
+            escena.gameObject.SetActive(false);
+
+            // Iniciar escena combate
+            SceneManager.LoadScene(escenaCombate, LoadSceneMode.Additive);
         }
     }
 }

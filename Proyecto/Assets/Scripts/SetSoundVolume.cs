@@ -15,5 +15,8 @@ public class SetSoundVolume : MonoBehaviour
         } else {
             mixer.SetFloat("SoundVol", Mathf.Log10(sliderValue) * 20);
         }
+
+        // Guardar preferencias
+        PlayerPrefs.SetString("VolumenSonido", sliderValue.ToString());
     }
 }

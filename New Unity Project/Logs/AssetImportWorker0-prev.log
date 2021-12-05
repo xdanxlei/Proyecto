@@ -1,0 +1,228 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.20f1 (41c4e627c95f) revision 4310246'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 19042.1348; Version 2009; 64bit' Language: 'es' Physical Memory: 16345 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\2020.3.20f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+F:/Estudios/Desarrollo de Aplicaciones Multiplataforma/Proyecto/New Unity Project
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+50130
+Successfully changed project path to: F:/Estudios/Desarrollo de Aplicaciones Multiplataforma/Proyecto/New Unity Project
+F:/Estudios/Desarrollo de Aplicaciones Multiplataforma/Proyecto/New Unity Project
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 55.70 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.20f1 (41c4e627c95f)
+[Subsystems] Discovering subsystems at path C:/Program Files/2020.3.20f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path F:/Estudios/Desarrollo de Aplicaciones Multiplataforma/Proyecto/New Unity Project/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 960 (ID=0x1401)
+    Vendor:   
+    VRAM:     2007 MB
+    Driver:   30.0.14.9676
+Initialize mono
+Mono path[0] = 'C:/Program Files/2020.3.20f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/2020.3.20f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/2020.3.20f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56816
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/2020.3.20f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002871 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 50.71 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.252 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2253ms)
+		BeginReloadAssembly (63ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (430ms)
+			LoadAssemblies (61ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (153ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (31ms)
+			SetupLoadedEditorAssemblies (179ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (51ms)
+				BeforeProcessingInitializeOnLoad (12ms)
+				ProcessInitializeOnLoadAttributes (83ms)
+				ProcessInitializeOnLoadMethodAttributes (29ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.011523 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 52.01 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.148 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1148ms)
+		BeginReloadAssembly (153ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (19ms)
+		EndReloadAssembly (931ms)
+			LoadAssemblies (103ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (297ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (47ms)
+			SetupLoadedEditorAssemblies (373ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (52ms)
+				BeforeProcessingInitializeOnLoad (82ms)
+				ProcessInitializeOnLoadAttributes (211ms)
+				ProcessInitializeOnLoadMethodAttributes (14ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.54 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2267 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 98.2 MB.
+System memory in use after: 98.4 MB.
+
+Unloading 40 unused Assets to reduce memory usage. Loaded Objects now: 2700.
+Total: 3.469700 ms (FindLiveObjects: 0.181000 ms CreateObjectMapping: 0.082900 ms MarkObjects: 3.091100 ms  DeleteObjects: 0.113700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/RPG Battle System/Scenes
+  artifactKey: Guid(60177c6905dc03f41a1c0b945810bbe0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RPG Battle System/Scenes using Guid(60177c6905dc03f41a1c0b945810bbe0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd93fec86893880320cb7ec526b8e1bbd') in 0.008021 seconds 
+  Import took 0.011396 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.022185 seconds.
+  path: Assets/RPG Battle System/Scenes/Menus/Main.unity
+  artifactKey: Guid(89d6cb110f9985d47b466d31b26ce5fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RPG Battle System/Scenes/Menus/Main.unity using Guid(89d6cb110f9985d47b466d31b26ce5fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63c4729e615bdf2bb5b02308e0be0f7d') in 0.013566 seconds 
+  Import took 0.017078 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 29.004818 seconds.
+  path: Assets/RPG Battle System/Scenes/DarkForest/BattleDarkForest.unity
+  artifactKey: Guid(e3291d4dd4672cf419991ff340b4020c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RPG Battle System/Scenes/DarkForest/BattleDarkForest.unity using Guid(e3291d4dd4672cf419991ff340b4020c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40e766444b75127ff7173ba76e0ce24f') in 0.005761 seconds 
+  Import took 0.009358 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 29.942408 seconds.
+  path: Assets/RPG Battle System/Documentation
+  artifactKey: Guid(4b6ed5b5c52a5c24fa0fb9f53c8ed41b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RPG Battle System/Documentation using Guid(4b6ed5b5c52a5c24fa0fb9f53c8ed41b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5edb6a63364176201761807451e17d79') in 0.004479 seconds 
+  Import took 0.008290 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.881586 seconds.
+  path: Assets/RPG Battle System/Documentation/ReadMe-Documentation.pdf
+  artifactKey: Guid(5a006511d1bf11849bbacfd7ed4e8a7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RPG Battle System/Documentation/ReadMe-Documentation.pdf using Guid(5a006511d1bf11849bbacfd7ed4e8a7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '888176aa1c918219ab17df18756cb7fa') in 0.028446 seconds 
+  Import took 0.031818 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 161.106932 seconds.
+  path: Assets/RPG Battle System/Resources/Sounds/misc_menu.wav
+  artifactKey: Guid(16c3839ae9ba02048ab92126ccd73d4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RPG Battle System/Resources/Sounds/misc_menu.wav using Guid(16c3839ae9ba02048ab92126ccd73d4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '822ee3be73e4b94e02beb9ee2c86a6ad') in 0.079492 seconds 
+  Import took 0.083655 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.219237 seconds.
+  path: Assets/RPG Battle System/Resources/Sounds/theme-11.ogg
+  artifactKey: Guid(5b4802b8cf4a1f4478bc46613fa48a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RPG Battle System/Resources/Sounds/theme-11.ogg using Guid(5b4802b8cf4a1f4478bc46613fa48a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2263d5995ad679ec4a758937be11c819') in 0.025917 seconds 
+  Import took 0.029368 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.738000 seconds.
+  path: Assets/RPG Battle System/Resources/Sounds/softpiano20.ogg
+  artifactKey: Guid(eba11936651f2a44fba8a77499a28174) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RPG Battle System/Resources/Sounds/softpiano20.ogg using Guid(eba11936651f2a44fba8a77499a28174) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd60d032a2484a416d8f3b28c4a53cd8f') in 0.020170 seconds 
+  Import took 0.023707 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.713249 seconds.
+  path: Assets/RPG Battle System/Resources/Sounds/metalLatch.ogg
+  artifactKey: Guid(5a29b6f84d8f00f46b924482049532c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RPG Battle System/Resources/Sounds/metalLatch.ogg using Guid(5a29b6f84d8f00f46b924482049532c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f11e1c589247d91607ccc818a0adaf45') in 0.013174 seconds 
+  Import took 0.016617 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.383444 seconds.
+  path: Assets/RPG Battle System/Resources/Sounds/Bumblebee loop.ogg
+  artifactKey: Guid(be6a8a9944024a647a4cf921a92668b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RPG Battle System/Resources/Sounds/Bumblebee loop.ogg using Guid(be6a8a9944024a647a4cf921a92668b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a89fc0705c023fa59fcc08edf258ce9a') in 0.012542 seconds 
+  Import took 0.016092 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.893001 seconds.
+  path: Assets/RPG Battle System/Resources/Sounds/swish-10.wav
+  artifactKey: Guid(ec6da8d93fd590a46bd8cf1928f20fe7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RPG Battle System/Resources/Sounds/swish-10.wav using Guid(ec6da8d93fd590a46bd8cf1928f20fe7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99248c37e01eb6f0118b3fa15dd061ef') in 0.013371 seconds 
+  Import took 0.016708 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 47.448664 seconds.
+  path: Assets/RPG Battle System/Graphics/Sprites
+  artifactKey: Guid(b1262e9b97954074fad47debf5ca9e7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RPG Battle System/Graphics/Sprites using Guid(b1262e9b97954074fad47debf5ca9e7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fadb6e381680258d9fa004354092aa1') in 0.305233 seconds 
+  Import took 0.309186 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
