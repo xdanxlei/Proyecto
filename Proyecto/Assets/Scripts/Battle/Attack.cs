@@ -15,6 +15,7 @@ public class Attack : Action
         if (objetivo is null) {
             objetivo = usuario.ElegirObjetivo(batalla, this);
         }
+
         objetivo.PerderVida(damage);
     }
 }

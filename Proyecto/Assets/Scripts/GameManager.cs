@@ -17,6 +17,9 @@ public class GameManager : MonoBehaviour
     public int vidaMaxJ1 = 100;
     public int velJ1 = 10;
 
+    // Lista de combates
+    public List<String> combates = new List<string> { "Mapa1Combate1" };
+
     // Audio
     public AudioSource musica;
     public AudioSource sonido;
@@ -25,6 +28,15 @@ public class GameManager : MonoBehaviour
     public bool cargar = false;
     public float x;
     public float y;
+
+    // Escena mapa actual
+    public GameObject escena;
+
+    // Combates terminados
+    public Dictionary<string, bool> terminados = new Dictionary<string, bool>();
+
+    // Orientación del personaje
+    public string orientacion = "derecha";
 
     private void Start() {
         // No destruir reproductores de audio

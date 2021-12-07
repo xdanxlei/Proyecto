@@ -18,6 +18,7 @@ public class Battle : Collidable
             // Pausar escena
             gameObject.SetActive(false);
             escena.gameObject.SetActive(false);
+            GameManager.instance.escena = escena;
 
             // Iniciar escena combate
             SceneManager.LoadScene(escenaCombate, LoadSceneMode.Additive);

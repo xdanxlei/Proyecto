@@ -13,9 +13,14 @@ public class BattleManager : MonoBehaviour
     // Menús
     public GameObject menuAccion;
     public GameObject menuObjetivo;
+    public GameObject mensajeVictoria;
+    public GameObject mensajeDerrota;
 
     // Número de aliados por escoger acción
     private int restantes;
+
+    // Música
+    public AudioClip musica;
 
     // Sonidos
     public AudioClip botonEn;
@@ -266,15 +271,18 @@ public class BattleManager : MonoBehaviour
 
     // Terminar combate
     public void Victoria(){
-        if (restantes >= 1) {
-            Victoria();
-        } else {
-            Derrota();
-        }
+        mensajeVictoria.gameObject.SetActive(true);
+
+        // Cambiar música
+        GameManager.instance.musica.clip = musica;
+
+        // Reproducir música
+        GameManager.instance.musica.Play();
     }
 
     // Terminar combate
     public void Derrota(){
+        mensajeDerrota.gameObject.SetActive(true);
     }
 
     // Sonidos

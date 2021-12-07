@@ -112,6 +112,8 @@ public class MenuPausa : MonoBehaviour
     public void menuPrincipal(){
         Time.timeScale = 1;
         GameManager.instance.musica.Stop();
+        Destroy(GameManager.instance.musica);
+        Destroy(GameManager.instance.sonido);
         SceneManager.LoadScene(MENU_PRINCIPAL, LoadSceneMode.Single);
     }
 
@@ -130,6 +132,9 @@ public class MenuPausa : MonoBehaviour
         PlayerPrefs.SetString(nombrePartida + "Escena", escena);
         PlayerPrefs.SetFloat(nombrePartida + "PosicionX", jugador.transform.position.x);
         PlayerPrefs.SetFloat(nombrePartida + "PosicionY", jugador.transform.position.y);
+        foreach (KeyValuePair<string, bool> combate in GameManager.instance.terminados) {
+            PlayerPrefs.SetString(nombrePartida + combate.Key, combate.Value.ToString());
+        }
 
         // Cerrar ventana
         menuGuardar.gameObject.SetActive(false);

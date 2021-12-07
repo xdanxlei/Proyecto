@@ -67,6 +67,13 @@ public class Player : MonoBehaviour
         if (hit.collider == null) {
             // Mover y
             transform.Translate(0, moveDelta.y * Time.deltaTime, 0); // * Time.deltaTime es fundamental para que la velocidad no dependa de los FPS
+
+            // Guardar orientación
+            if (moveDelta.x > 0) {
+                GameManager.instance.orientacion = "derecha";
+            } else if (moveDelta.x < 0) {
+                GameManager.instance.orientacion = "izquierda";
+            }
         }
         
         // Detección de colisión en x
@@ -76,6 +83,13 @@ public class Player : MonoBehaviour
         if (hit.collider == null) {
             // Mover x
             transform.Translate(moveDelta.x * Time.deltaTime, 0, 0);
+
+            // Guardar orientación
+            if (moveDelta.y > 0) {
+                GameManager.instance.orientacion = "arriba";
+            } else if (moveDelta.y < 0) {
+                GameManager.instance.orientacion = "abajo";
+        }
         }
     }
 }

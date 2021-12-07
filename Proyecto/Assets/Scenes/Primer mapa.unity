@@ -2711,7 +2711,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1900846767}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &549714347
 GameObject:
@@ -3744,6 +3744,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 760270356}
   m_CullTransparentMesh: 1
+--- !u!1 &771376002
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 771376003}
+  - component: {fileID: 771376004}
+  m_Layer: 0
+  m_Name: Interaction detector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &771376003
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 771376002}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 25.05408, y: 38.27542, z: -207.70425}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1900846767}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &771376004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 771376002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bc81f2e32bfbc445a1c6f85fb599e04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &781125723
 GameObject:
   m_ObjectHideFlags: 0
@@ -5130,7 +5173,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1900846767}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &984281511
 PrefabInstance:
@@ -9657,8 +9700,8 @@ Transform:
   m_Children:
   - {fileID: 1225646651}
   - {fileID: 695222298}
-  - {fileID: 976016382}
   - {fileID: 523612113}
+  - {fileID: 976016382}
   - {fileID: 361721318}
   - {fileID: 1847507912}
   - {fileID: 349636824}
@@ -9669,6 +9712,7 @@ Transform:
   - {fileID: 1662977097}
   - {fileID: 971983919}
   - {fileID: 1762017608}
+  - {fileID: 771376003}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9685,7 +9729,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuPausa: {fileID: 1847507911}
+  menuGuardar: {fileID: 349636820}
+  menuOpciones: {fileID: 195235119}
+  menuSalir: {fileID: 1957325154}
+  menuVolverAMain: {fileID: 1539536719}
+  menuConfirmarSalir: {fileID: 1077416831}
   gear: {fileID: 361721317}
+  combate: {fileID: 976016378}
   botonPos: {fileID: 8300000, guid: e6c1331b745274544a1307f0a279f103, type: 3}
   botonNeg: {fileID: 8300000, guid: 251f005bcd124994f9e8704051f1faae, type: 3}
 --- !u!1 &1938480381

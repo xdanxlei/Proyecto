@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.UI;
 
 public class Battler : MonoBehaviour
 {
@@ -42,6 +43,14 @@ public class Battler : MonoBehaviour
         if (HP < 0) {
             HP = 0;
         }
+
+        // Obtener slider del combatiente
+        Slider slider = transform.GetChild(0).GetChild(0).gameObject.GetComponent<Slider>();
+        Text texto = transform.GetChild(0).GetChild(0).GetChild(2).gameObject.GetComponent<Text>();
+
+        // Modificar slider
+        slider.value = HP;
+        texto.text = HP.ToString() + "/" + maxHP.ToString();
     }
 
     // El luchador adquiere el estado

@@ -131,6 +131,11 @@ public class MenuPrincipal : MonoBehaviour
         GameManager.instance.x = PlayerPrefs.GetFloat(nombrePartida + "PosicionX");
         GameManager.instance.y = PlayerPrefs.GetFloat(nombrePartida + "PosicionY");
         string mapa = PlayerPrefs.GetString(nombrePartida + "Escena");
+        foreach (string clave in GameManager.instance.combates)
+        {
+            bool terminado = PlayerPrefs.HasKey(nombrePartida + clave);
+            GameManager.instance.terminados.Add(clave, terminado);
+        }
 
         // Ir al primer mapa
         SceneManager.LoadScene(mapa, LoadSceneMode.Single);
