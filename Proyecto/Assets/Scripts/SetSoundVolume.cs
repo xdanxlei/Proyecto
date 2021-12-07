@@ -17,6 +17,6 @@ public class SetSoundVolume : MonoBehaviour
         }
 
         // Guardar preferencias
-        PlayerPrefs.SetString("VolumenSonido", sliderValue.ToString());
+        PlayerPrefs.SetFloat("VolumenSonido", sliderValue);
     }
 }

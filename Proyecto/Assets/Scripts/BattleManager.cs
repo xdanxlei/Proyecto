@@ -16,6 +16,46 @@ public class BattleManager : MonoBehaviour
         // Colocar en sus posiciones
         Aliados();
         Enemigos();
+
+        // Mostrar menú de acciones
+        ElegirAcciones();
+    }
+
+    // Ciclo de batalla
+    private void CicloDeBatalla() {
+        // Los enemigos eligen sus acciones
+        AccionesIA();
+
+        // Ordenar acciones por velocidad
+        OrdenarAcciones();
+
+        // Ejecutar acciones
+        EjecutarAcciones();
+    }
+
+    // Decide si el combate debe continuar
+    private void Batallar() {
+
+    }
+
+    // Muestra los menús apropiados para que el jugador escoja sus acciones
+    private void ElegirAcciones() {
+
+    }
+
+    // Decide si el combate debe continuar
+    private void AccionesIA() {
+
+    }
+
+    // Decide si el combate debe continuar
+    private void OrdenarAcciones() {
+
+    }
+
+    // Decide si el combate debe continuar
+    private void EjecutarAcciones() {
+
     }
 
     // Colocar aliados

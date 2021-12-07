@@ -16,12 +16,13 @@ public class MenuPausa : MonoBehaviour
     const string KEY_SONIDO = "VolumenSonido";
 
     // Objetos
-    public GameObject  menuPausa;
-    public GameObject  menuOpciones;
-    public GameObject  menuSalir;
-    public GameObject  menuVolverAMain;
-    public GameObject  menuConfirmarSalir;
-    public GameObject  gear;
+    public GameObject menuPausa;
+    public GameObject menuGuardar;
+    public GameObject menuOpciones;
+    public GameObject menuSalir;
+    public GameObject menuVolverAMain;
+    public GameObject menuConfirmarSalir;
+    public GameObject gear;
 
     // Sonidos
     public AudioClip botonEn;
@@ -32,15 +33,21 @@ public class MenuPausa : MonoBehaviour
     public Slider musica;
     public Slider sonido;
 
+    // Nombre de la escena actual
+    public string escena;
+
+    // Jugador
+    public GameObject jugador;
+
     // Start is called before the first frame update
     void Start()
     {
         // Cambiar sliders
         if (PlayerPrefs.HasKey(KEY_MUSICA)){
-            musica.value = (float) Convert.ToDouble(PlayerPrefs.GetString(KEY_MUSICA));
+            musica.value = PlayerPrefs.GetFloat(KEY_MUSICA);
         }
         if (PlayerPrefs.HasKey(KEY_SONIDO)){
-            sonido.value = (float) Convert.ToDouble(PlayerPrefs.GetString(KEY_SONIDO));
+            sonido.value = PlayerPrefs.GetFloat(KEY_SONIDO);
         }
     }
 
@@ -50,6 +57,12 @@ public class MenuPausa : MonoBehaviour
         Time.timeScale = 1;
         menuPausa.gameObject.SetActive(false);
         gear.gameObject.SetActive(true);
+    }
+
+    // Función para abrir el menú de guardar partida
+    public void menuGuardarPartida() {
+        menuPausa.gameObject.SetActive(false);
+        menuGuardar.gameObject.SetActive(true); 
     }
 
     // Función para abrir el menú de opciones
@@ -69,6 +82,7 @@ public class MenuPausa : MonoBehaviour
     // Función para abrir el menú de opciones y cerrar los demás
     public void volver(){
         menuPausa.gameObject.SetActive(true);
+        menuGuardar.gameObject.SetActive(false);
         menuOpciones.gameObject.SetActive(false);
         menuSalir.gameObject.SetActive(false);
     }
@@ -96,8 +110,30 @@ public class MenuPausa : MonoBehaviour
 
     // Función para volver al menú principal
     public void menuPrincipal(){
+        Time.timeScale = 1;
         GameManager.instance.musica.Stop();
         SceneManager.LoadScene(MENU_PRINCIPAL, LoadSceneMode.Single);
+    }
+
+    // Guardar partida
+    public void guardar(string partida){
+        // Nombre de la partida
+        string nombrePartida = "Partida" + partida;
+
+        // Establecer partida como guardada
+        PlayerPrefs.SetString(nombrePartida, "set");
+
+        // Guardar datos
+        PlayerPrefs.SetInt(nombrePartida + "VidaJ1", GameManager.instance.vidaJ1);
+        PlayerPrefs.SetInt(nombrePartida + "VidaMaxJ1", GameManager.instance.vidaMaxJ1);
+        PlayerPrefs.SetInt(nombrePartida + "VelocidadJ1", GameManager.instance.velJ1);
+        PlayerPrefs.SetString(nombrePartida + "Escena", escena);
+        PlayerPrefs.SetFloat(nombrePartida + "PosicionX", jugador.transform.position.x);
+        PlayerPrefs.SetFloat(nombrePartida + "PosicionY", jugador.transform.position.y);
+
+        // Cerrar ventana
+        menuGuardar.gameObject.SetActive(false);
+        reanudar();
     }
 
     // Reproducir sonidos

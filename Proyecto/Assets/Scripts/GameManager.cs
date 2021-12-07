@@ -13,13 +13,18 @@ public class GameManager : MonoBehaviour
     }
 
     // Variables de combate
-    public static Battler jugador = new Battler(100, 100, 10);
+    public int vidaJ1 = 100;
+    public int vidaMaxJ1 = 100;
+    public int velJ1 = 10;
 
     // Audio
     public AudioSource musica;
-    public AudioMixer musMix;
     public AudioSource sonido;
-    public AudioMixer soMix;
+
+    // Partida cargada
+    public bool cargar = false;
+    public float x;
+    public float y;
 
     private void Start() {
         // No destruir reproductores de audio
