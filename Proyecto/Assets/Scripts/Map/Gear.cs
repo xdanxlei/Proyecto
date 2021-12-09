@@ -5,7 +5,7 @@ using UnityEngine;
 public class Gear : MonoBehaviour
 {
     // Objetos
-    public GameObject  menuPausa;
+    public GameObject menuPausa;
     public GameObject gear;
 
     // Update is called once per frame

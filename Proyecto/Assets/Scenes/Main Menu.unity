@@ -3231,7 +3231,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000011444, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -347.005, y: -231.2683}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1040666544
@@ -3304,8 +3304,15 @@ MonoBehaviour:
   vidaJ1: 100
   vidaMaxJ1: 100
   velJ1: 10
+  combates:
+  - Mapa1Combate1
   musica: {fileID: 1855049310}
   sonido: {fileID: 1994668604}
+  cargar: 0
+  x: 0
+  y: 0
+  escena: {fileID: 0}
+  orientacion: derecha
 --- !u!4 &1166629699
 Transform:
   m_ObjectHideFlags: 0
@@ -4948,7 +4955,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 122}
+  m_AnchoredPosition: {x: 0, y: 114.2}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1688674155

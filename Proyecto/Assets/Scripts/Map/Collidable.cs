@@ -42,6 +42,5 @@ public class Collidable : MonoBehaviour
 
     // Al colisionar con algo
     protected virtual void OnCollide(Collider2D colision) {
-        
     }
 }

@@ -15,7 +15,7 @@ public abstract class Action : MonoBehaviour, IComparable
     public abstract void Efecto(BattleManager batalla);
 
     // Compara dos acciones en función de su prioridad y la velocidad de sus usuarios
-    public int CompareTo (System.Object objeto) {
+    public int CompareTo(System.Object objeto) {
         if (objeto is Action) {
             Action accion = (Action) objeto;
             // Comparar prioridades
