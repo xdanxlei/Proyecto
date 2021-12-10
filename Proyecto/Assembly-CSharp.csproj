@@ -67,6 +67,7 @@
      <Compile Include="Assets\Cainos\Pixel Art Top Down - Basic\Script\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\Battle\Attack.cs" />
      <Compile Include="Assets\Scripts\Map\BattleStarter.cs" />
+     <Compile Include="Assets\Scripts\Map\MensajeGuardar.cs" />
      <None Include="Assets\Cainos\Pixel Art Top Down - Basic\Changelog.txt" />
      <None Include="Assets\Cainos\Pixel Art Top Down - Basic\Shader\SH Sprite Shadow.shader" />
      <None Include="Assets\Cainos\Pixel Art Top Down - Basic\Shader\SH Sprite Shadow Mask.shader" />

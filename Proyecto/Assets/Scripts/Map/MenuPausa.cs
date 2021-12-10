@@ -22,12 +22,14 @@ public class MenuPausa : MonoBehaviour
     public GameObject menuVolverAMain;
     public GameObject menuConfirmarSalir;
     public GameObject gear;
+    public GameObject mensajeGuardar;
     public GameObject fade;
 
     // Sonidos
     public AudioClip botonEn;
     public AudioClip botonPos;
     public AudioClip botonNeg;
+    public AudioClip botonGuardar;
 
     // Sliders
     public Slider musica;
@@ -138,7 +140,10 @@ public class MenuPausa : MonoBehaviour
 
         // Cerrar ventana
         menuGuardar.gameObject.SetActive(false);
-        reanudar();
+        GameManager.instance.sonido.PlayOneShot(botonGuardar);
+
+        // Mostrar mensaje
+        mensajeGuardar.gameObject.SetActive(true);
     }
 
     // Reproducir sonidos
