@@ -31,6 +31,8 @@ public class GameManager : MonoBehaviour
 
     // Escena mapa actual
     public GameObject escena;
+    public GameObject faderEscena;
+    public Animator animatorEscena;
 
     // Combates terminados
     public Dictionary<string, bool> terminados = new Dictionary<string, bool>();

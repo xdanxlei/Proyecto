@@ -11,7 +11,6 @@ using UnityEngine.SceneManagement;
 public class MenuPausa : MonoBehaviour
 {
     // Constantes
-    const string MENU_PRINCIPAL = "Main Menu";
     const string KEY_MUSICA = "VolumenMusica";
     const string KEY_SONIDO = "VolumenSonido";
 
@@ -23,6 +22,7 @@ public class MenuPausa : MonoBehaviour
     public GameObject menuVolverAMain;
     public GameObject menuConfirmarSalir;
     public GameObject gear;
+    public GameObject fade;
 
     // Sonidos
     public AudioClip botonEn;
@@ -114,7 +114,7 @@ public class MenuPausa : MonoBehaviour
         GameManager.instance.musica.Stop();
         Destroy(GameManager.instance.musica);
         Destroy(GameManager.instance.sonido);
-        SceneManager.LoadScene(MENU_PRINCIPAL, LoadSceneMode.Single);
+        fade.gameObject.SetActive(true);
     }
 
     // Guardar partida

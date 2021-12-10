@@ -43,6 +43,7 @@
      <Compile Include="Assets\Scripts\Map\Cargador.cs" />
      <Compile Include="Assets\Scripts\Map\Player.cs" />
      <Compile Include="Assets\Scripts\SetVolume.cs" />
+     <Compile Include="Assets\Scripts\LevelFader.cs" />
      <Compile Include="Assets\Scripts\Battle\BattleManager.cs" />
      <Compile Include="Assets\Cainos\Pixel Art Top Down - Basic\Script\PropsAltar.cs" />
      <Compile Include="Assets\Scripts\Map\CameraMotor.cs" />
@@ -54,6 +55,7 @@
      <Compile Include="Assets\Scripts\Map\Gear.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\ReproduceMusica.cs" />
+     <Compile Include="Assets\Scripts\Battle\BattleFadeOut.cs" />
      <Compile Include="Assets\Scripts\Battle\State.cs" />
      <Compile Include="Assets\Scripts\Map\Battle.cs" />
      <Compile Include="Assets\Scripts\Map\Collidable.cs" />
@@ -64,6 +66,7 @@
      <Compile Include="Assets\Scripts\Map\InteractionDetector.cs" />
      <Compile Include="Assets\Cainos\Pixel Art Top Down - Basic\Script\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\Battle\Attack.cs" />
+     <Compile Include="Assets\Scripts\Map\BattleStarter.cs" />
      <None Include="Assets\Cainos\Pixel Art Top Down - Basic\Changelog.txt" />
      <None Include="Assets\Cainos\Pixel Art Top Down - Basic\Shader\SH Sprite Shadow.shader" />
      <None Include="Assets\Cainos\Pixel Art Top Down - Basic\Shader\SH Sprite Shadow Mask.shader" />

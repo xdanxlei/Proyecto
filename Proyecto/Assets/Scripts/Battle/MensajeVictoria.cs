@@ -1,30 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class MensajeVictoria : MonoBehaviour
-{
-    // Música
-    public AudioClip musica;
-    
+{    
+    // Mensaje
+    public GameObject mensaje;
+
+    // Animator
+    public Animator fadeOut;
+    public GameObject fadeOutObject;
+
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKeyDown(KeyCode.Z) || Input.GetMouseButtonDown(0))
         {
-            // Marcar combate como terminado
-            GameManager.instance.terminados["Mapa1Combate1"] = true;
-
-            // Volver a la escena mapa
-            SceneManager.UnloadSceneAsync("Combate_1");
-            GameManager.instance.escena.gameObject.SetActive(true);
-                
-            // Cambiar música
-            GameManager.instance.musica.clip = musica;
-
-            // Reproducir música
-            GameManager.instance.musica.Play();
+            mensaje.gameObject.SetActive(false);
+            fadeOutObject.gameObject.SetActive(true);
+            fadeOut.SetTrigger("Victoria");
         } 
     }
 }

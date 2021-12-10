@@ -11,7 +11,6 @@ using System;
 public class MenuPrincipal : MonoBehaviour
 {
     // Constantes
-    const string PRIMER_MAPA = "Primer mapa";
     const string KEY_MUSICA = "VolumenMusica";
     const string KEY_SONIDO = "VolumenSonido";
     const string KEY_PARTIDA_1 = "Partida1";
@@ -36,6 +35,10 @@ public class MenuPrincipal : MonoBehaviour
     // Sliders
     public Slider musica;
     public Slider sonido;
+
+    // Animaciones
+    public Animator fadeAnimator;
+    public GameObject fader;
 
     // Start is called before the first frame update
     void Start()
@@ -113,7 +116,9 @@ public class MenuPrincipal : MonoBehaviour
 
     // Iniciar una nueva partida
     public void nuevaPartida(){
-        SceneManager.LoadScene(PRIMER_MAPA, LoadSceneMode.Single);
+        // Transicionar a otro mapa
+        fader.gameObject.SetActive(true);
+        fadeAnimator.SetTrigger("FadeOut");
     }
 
     // Cargar partida anteriormente guardada
@@ -137,8 +142,9 @@ public class MenuPrincipal : MonoBehaviour
             GameManager.instance.terminados.Add(clave, terminado);
         }
 
-        // Ir al primer mapa
-        SceneManager.LoadScene(mapa, LoadSceneMode.Single);
+        // Transicionar a otro mapa
+        fader.gameObject.SetActive(true);
+        fadeAnimator.SetTrigger("FadeOut");
     }
 
     // Sonidos

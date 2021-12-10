@@ -16,6 +16,7 @@ public class Attack : Action
             objetivo = usuario.ElegirObjetivo(batalla, this);
         }
 
+        usuario.Animacion("Action");
         objetivo.PerderVida(damage);
     }
 }

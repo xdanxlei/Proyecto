@@ -1,20 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class MensajeDerrota : MonoBehaviour
 {
-    // Nombre de la escena game over
-    private string GAME_OVER = "Game Over";
+    // Mensaje
+    public GameObject mensaje;
 
+    // Animator
+    public Animator fadeOut;
+    public GameObject fadeOutObject;
+    
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKeyDown(KeyCode.Z) || Input.GetMouseButtonDown(0))
         {
-            // Ir a la escena Game Over
-            SceneManager.LoadScene(GAME_OVER, LoadSceneMode.Single);
+            mensaje.gameObject.SetActive(false);
+            fadeOutObject.gameObject.SetActive(true);
+            fadeOut.SetTrigger("Derrota");
         } 
     }
 }

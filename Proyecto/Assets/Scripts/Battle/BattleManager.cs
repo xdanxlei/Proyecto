@@ -65,7 +65,16 @@ public class BattleManager : MonoBehaviour
         acciones.Sort();
 
         // Ejecutar acciones
-        EjecutarAcciones();
+        int segundos = EjecutarAcciones();
+
+        // Esperar acciones
+        StartCoroutine(Corrutina2(segundos));
+    }
+
+    IEnumerator Corrutina2(float segundos)
+    {
+        // Esperar acciones
+        yield return new WaitForSeconds(segundos);
 
         // Vaciar lista de acciones
         EliminarAcciones();
@@ -81,7 +90,7 @@ public class BattleManager : MonoBehaviour
             ElegirAcciones();
         } else {
             TerminarCombate();
-        }
+        }        
     }
 
     // Número de aliados por escoger acción
@@ -193,14 +202,35 @@ public class BattleManager : MonoBehaviour
     }
 
     // Ejecuta todas las acciones
-    private void EjecutarAcciones() {
-        foreach (Action accion in acciones)
+    private int EjecutarAcciones() {
+        int segundos = 2;
+        for (int i = 0; i < acciones.Count; i++)
         {
+            Action accion = acciones[i];
+            segundos = i;
+            if (i == 1 && acciones[0] is SelfStateAction){
+                segundos--;
+            }
+
             // Comprobar que el usuario puede luchar
             if (accion.usuario.PuedeLuchar()) {
-                // Ejecutar acción
-                accion.Efecto(this);
+                // Esperar animación y ejecutar acción
+                StartCoroutine(Corrutina(accion, segundos));
             }
+        }
+
+        return segundos + 1;
+    }
+
+    IEnumerator Corrutina(Action accion, float segundos)
+    {
+        // Esperar a la animación anterior
+        yield return new WaitForSeconds(segundos);
+                
+        // Comprobar que el usuario puede luchar
+        if (accion.usuario.PuedeLuchar()) {
+            // Ejecutar acción
+            accion.Efecto(this);
         }
     }
 

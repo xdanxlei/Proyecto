@@ -22,6 +22,21 @@ public class Battler : MonoBehaviour
     // Estados que posee
     public List<State> estados = new List<State>();
 
+    // Animators
+    public Animator animator;
+    public Animator animatorEspada;
+    public Animator animatorEnemigo;
+
+    // Sonidos
+    public AudioClip slash;
+
+    // Damage
+    public Text damage;
+
+    public void Start(){
+        animator = GetComponent<Animator>();
+    }
+
     // Decide si el luchador puede combatir
     public bool PuedeLuchar(){
         return HP > 0;
@@ -44,6 +59,9 @@ public class Battler : MonoBehaviour
             HP = 0;
         }
 
+        // Cambiar texto
+        damage.text = (-vida).ToString();
+
         // Obtener slider del combatiente
         Slider slider = transform.GetChild(0).GetChild(0).gameObject.GetComponent<Slider>();
         Text texto = transform.GetChild(0).GetChild(0).GetChild(2).gameObject.GetComponent<Text>();
@@ -51,6 +69,11 @@ public class Battler : MonoBehaviour
         // Modificar slider
         slider.value = HP;
         texto.text = HP.ToString() + "/" + maxHP.ToString();
+
+        // Morir
+        if (HP <= 0) {
+            //Animacion("Hidden");
+        }
     }
 
     // El luchador adquiere el estado
@@ -87,6 +110,18 @@ public class Battler : MonoBehaviour
             estados.Remove(estado);
             Destroy(estado);
         }
+    }
+
+    // Reproducir una animación
+    public void Animacion(string trigger) {
+        animator.SetTrigger(trigger);
+    }
+
+    // Animar la espada
+    public void AnimacionEspada() {
+        animatorEspada.SetTrigger("Swing");
+        animatorEnemigo.SetTrigger("Damaged");
+        GameManager.instance.sonido.PlayOneShot(slash);
     }
 
     // IA básica placeholder
